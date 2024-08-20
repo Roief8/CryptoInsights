@@ -52,8 +52,11 @@ treemap of cryptocurrency market performance
 ### Enviroment variables Configuration
 
 AWS_ACCESS_KEY_ID: Your AWS access key
+
 AWS_SECRET_ACCESS_KEY: Your AWS secret access key
+
 S3_BUCKET_NAME: The name of your S3 bucket
+
 SNS_TOPIC_ARN: The ARN of your SNS topic
 
 ## Usage
