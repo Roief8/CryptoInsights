@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoInsights - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .main-feature {
+            grid-column: span 2;
+            background-color: #f8f9fa;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #9b59b6;
+            transition: background-color 0.3s ease;
+        }
+
+        .align-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+ 
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-chart-line text-blue-500 text-2xl mr-2"></i>
+                        <a href="/" class="font-semibold text-gray-900 text-lg">CryptoInsights</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="/" class="text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/treemap" class="text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Treemap</a>
+                    <a href="/info-tables" class="text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium">Info Tables</a>
+                    <a href="/crypto-report" target="_blank" class="text-gray-900 hover:text-blue-500 px-3 py-2 rounded-md text-sm font-medium bg-blue-500 text-white rounded-md">Crypto Report</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div class="px-4 py-6 sm:px-0 text-center">
+            <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-400 mb-2 p-3 inline-block">Welcome to CryptoInsights</h1>
+            <p class="text-xl text-gray-600 mb-12">Discover the power of data-driven cryptocurrency analysis with our cutting-edge tools and reports.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+               
+
+                <!-- Crypto Report Card -->
+                <div class="overflow-hidden shadow-lg rounded-lg main-feature card align-center">
+                    <div class="px-6 py-8 sm:p-10">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Crypto Report</h2>
+                        <p class="text-gray-600 mb-6">Download our comprehensive report on the latest trends and insights in the cryptocurrency market.</p>
+                        <a href="/crypto-report" target="_blank" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 mb-4">
+                            Get Report
+                            <svg class="ml-2 -mr-1 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                  
+                        <div class="mt-6">
+                            <p class="text-gray-600 mb-2">Subscribe to receive our daily report:</p>
+                            <form id="subscription-form" action="/subscribe" method="POST">
+                                <input type="email" id="email" name="email" placeholder="Enter your email" class="px-4 py-2 border rounded-md w-full mb-3" required>
+                                <button type="submit" class="w-full px-5 py-2 text-white bg-purple-500 rounded-md register-button">Register</button>
+                                <p id="subscriptionMessage" class="text-gray-600 mt-2"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Info Tables / Treemap Cards -->
+                 <div class="bg-white overflow-hidden shadow rounded-lg card align-center">
+                    <div class="px-4 py-5 sm:p-6">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Info Tables</h2>
+                        <p class="text-gray-600 mb-6">View detailed information tables about cryptocurrencies, including rankings, gainers, and losers.</p>
+                        <a href="/info-tables" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                            View Info Tables
+                            <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="px-4 py-5 sm:p-6">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Treemap Analysis</h2>
+                        <p class="text-gray-600 mb-6">Visualize cryptocurrency market capitalization and performance with our interactive treemap.</p>
+                        <a href="/treemap" class="inline-flex items-center px-4 py-2 mt-5 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                            View Treemap
+                            <svg class="ml-2 -mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between">
+                <div>
+                    <a  class="text-gray-500 hover:text-gray-900">
+                        © CryptoInsights 2024 
+                    </a>
+                </div>
+                <div class='px-4'>
+                    <a href="https://www.linkedin.com/in/roiefraim/" class="text-gray-500 hover:text-gray-900 px-3">
+                        <i class="fab fa-linkedin"></i> Roi Efraim  
+                    </a>
+                    <a href="https://www.linkedin.com/in/raz-sherf/" class="text-gray-500 hover:text-gray-900 px-3">
+                        <i class="fab fa-linkedin"></i> Raz Sherf
+                    </a>
+                </div>
+       
+  
+<script>
+    document.getElementById('subscription-form').addEventListener('submit', async function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const emailInput = document.getElementById('email');
+        const subscriptionMessage = document.getElementById('subscriptionMessage');
+        const email = emailInput.value;
+
+        // Simple email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Check if the email is valid
+        if (!email) {
+            subscriptionMessage.textContent = "Email field cannot be empty.";
+            subscriptionMessage.style.color = "red";
+            return;
+        } else if (!emailRegex.test(email)) {
+            subscriptionMessage.textContent = "Please enter a valid email address.";
+            subscriptionMessage.style.color = "red";
+            return;
+        }
+
+        try {
+            const response = await fetch('/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                subscriptionMessage.textContent = "Subscription successful! Please check your email for confirmation.";
+                subscriptionMessage.style.color = "green";
+            } else {
+                subscriptionMessage.textContent = "This email is already subscribed.";
+                subscriptionMessage.style.color = "orange";
+            }
+        } catch (error) {
+            subscriptionMessage.textContent = "An error occurred. Please try again later.";
+            subscriptionMessage.style.color = "red";
+        }
+    });
+</script>
+                <!-- <script>
+                    document.getElementById('subscription-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                
+                        const formData = new FormData(this);
+                
+                        fetch('/subscribe', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.error) {
+                                alert(data.error);
+                            } else {
+                                alert(data.message);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
+                    });
+                </script> -->
