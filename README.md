@@ -12,15 +12,13 @@ CryptoInsights is a web application that provides data-driven cryptocurrency ana
 
 ## Screenshots
 
-Home page - report download option
+Home page - 
 
-![homepage](https://github.com/user-attachments/assets/ef3bfa30-1a8e-48bb-8675-5b0d16af5bff)
+![cryptoinsights-homepage](https://github.com/user-attachments/assets/6f4d24ff-bdec-4f9a-8ede-1b6888b38ceb)
 
-Info tables page - Top-ranked cryptocurrencies
-![info-tables](https://github.com/user-attachments/assets/3b4837dc-3ba9-4185-8c0e-9fda236ae05a)
+Home page dark mode - 
 
-treemap of cryptocurrency market performance
-![treemap](https://github.com/user-attachments/assets/b0a0a2af-7a56-48ed-9775-a397fd3cb6e0)
+![homepage-dm](https://github.com/user-attachments/assets/810b30bd-34c0-4ee2-8fb2-f957898b7193)
 
 ## Tech Stack
 - **Backend**: Python, Flask
@@ -28,36 +26,6 @@ treemap of cryptocurrency market performance
 - **Data Storage**: AWS S3
 - **Notification Service**: AWS SNS
 - **Deployment**: Docker, EC2
-
-### Installation
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/roief8/crypto-insights.git
-    cd crypto-insights
-    ```
-
-2. Build the Docker image:
-    ```bash
-    docker build -t crypto_report .
-    ```
-
-3. Run the Docker container:
-    ```bash
-    docker run -d -p 5000:5000 crypto_report
-    ```
-
-4. Access the application in your browser at `http://127.0.0.1:5000`.
-
-### Enviroment variables Configuration
-
-AWS_ACCESS_KEY_ID: Your AWS access key
-
-AWS_SECRET_ACCESS_KEY: Your AWS secret access key
-
-S3_BUCKET_NAME: The name of your S3 bucket
-
-SNS_TOPIC_ARN: The ARN of your SNS topic
 
 ## Usage
 
