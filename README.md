@@ -26,6 +26,7 @@ Home page dark mode -
 - **Data Storage**: AWS S3
 - **Notification Service**: AWS SNS
 - **Deployment**: Docker, EC2
+- **Messaging**: Telegram Bot
 
 ## Usage
 
